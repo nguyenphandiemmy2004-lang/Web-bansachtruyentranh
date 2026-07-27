@@ -64,8 +64,9 @@ function displayProducts(list) {
             Xem chi tiết
             </button>
 
-            <button class="cart-btn">
-                Thêm vào giỏ
+            <button class="cart-btn"
+            onclick="addToCart(${book.id})">
+            Thêm vào giỏ
             </button>
         </div>
         `;
