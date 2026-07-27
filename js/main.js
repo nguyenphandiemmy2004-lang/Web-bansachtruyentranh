@@ -34,34 +34,60 @@ function prevSlide() {
 /* Tự động chạy */
 setInterval(nextSlide, 3000);
 
-// ===============================
-// HIỂN THỊ SẢN PHẨM
-// ===============================
+/*==========================
+      HIỂN THỊ SẢN PHẨM
+==========================*/
 
 const productList = document.getElementById("product-list");
-function displayProducts() {
-  if (!productList) return;
+function displayProducts(list) {
   let html = "";
-  books.forEach((book) => {
+  list.forEach((book) => {
     html += `
-        <div class="product">
-            <img src="${book.image}" alt="${book.name}">
-            <h3>${book.name}</h3>
-            <p>${book.author}</p>
-            <p>${book.category}</p>
-            <p class="price">
-                ${book.price.toLocaleString()} đ
-            </p>
-            <button class="detail-btn">
-                Xem chi tiết
-            </button>
-            <button class="cart-btn">
-                Thêm vào giỏ
-            </button>
-        </div>
-        `;
+      <div class="product">
+        <img src="${book.image}" alt="${book.name}">
+        <h3>${book.name}</h3>
+        <p>${book.author}</p>
+        <p>${book.category}</p>
+        <p class="price">
+          ${book.price.toLocaleString()} đ
+        </p>
+        <button class="detail-btn">
+          Xem chi tiết
+        </button>
+
+        <button class="cart-btn">
+          Thêm vào giỏ
+        </button>
+      </div>
+    `;
   });
   productList.innerHTML = html;
 }
-displayProducts();
 
+/* Hiển thị tất cả */
+displayProducts(books);
+
+/*==========================
+      TÌM KIẾM
+==========================*/
+
+function searchBook() {
+  const keyword = document.getElementById("searchInput").value.toLowerCase();
+  const result = books.filter((book) =>
+    book.name.toLowerCase().includes(keyword),
+  );
+  displayProducts(result);
+}
+
+/*==========================
+      LỌC THỂ LOẠI
+==========================*/
+
+function filterCategory(category) {
+  if (category === "Tất cả") {
+    displayProducts(books);
+    return;
+  }
+  const result = books.filter((book) => book.category === category);
+  displayProducts(result);
+}
