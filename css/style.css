@@ -303,3 +303,36 @@ nav a:hover {
 .detail-btn:hover {
   background: #ef6c00;
 }
+
+/*==========================
+        CART TABLE
+===========================*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+table th {
+  background: #1565c0;
+  color: white;
+}
+table img {
+  border-radius: 5px;
+}
+table button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+}
+table button:hover {
+  opacity: 0.8;
+}
