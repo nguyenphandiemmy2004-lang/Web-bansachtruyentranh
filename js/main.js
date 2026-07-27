@@ -288,4 +288,17 @@ if (orderTotal) {
   });
   orderTotal.innerHTML = total.toLocaleString() + " đ";
 }
+/*======================================
+        ĐẶT HÀNG
+======================================*/
+
+const orderForm = document.getElementById("orderForm");
+if (orderForm) {
+  orderForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("🎉 Đặt hàng thành công!");
+    localStorage.removeItem("cart");
+    window.location.href = "index.html";
+  });
+}
 
