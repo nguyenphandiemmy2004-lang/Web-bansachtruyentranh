@@ -158,4 +158,26 @@ if (detailBox) {
         `;
   }
 }
+/*====================================
+        THÊM GIỎ HÀNG
+====================================*/
+
+function addToCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const book = books.find((item) => item.id === id);
+  const index = cart.findIndex((item) => item.id === id);
+  if (index !== -1) {
+    cart[index].quantity++;
+  } else {
+    cart.push({
+      id: book.id,
+      name: book.name,
+      price: book.price,
+      image: book.image,
+      quantity: 1,
+    });
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Đã thêm vào giỏ hàng!");
+}
 
