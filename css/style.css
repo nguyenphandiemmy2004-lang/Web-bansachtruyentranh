@@ -336,3 +336,50 @@ table button {
 table button:hover {
   opacity: 0.8;
 }
+/*==========================
+        ORDER
+===========================*/
+
+.order {
+  width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.order h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.order label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.order input,
+.order textarea,
+.order select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.order textarea {
+  height: 100px;
+}
+.order button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #1565c0;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.order button:hover {
+  background: #0d47a1;
+}
