@@ -1,50 +1,56 @@
-<header>
-  <div class="logo">
-    <img src="images/logo.png" alt="Logo" />
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store</title>
 
-    <h1>Book Store</h1>
-  </div>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Trang chủ</a></li>
+  <body>
+    <!-- ================= HEADER ================= -->
 
-      <li><a href="books.html">Danh mục</a></li>
+    <header>
+      <!-- Logo -->
 
-      <li><a href="cart.html">Giỏ hàng</a></li>
+      <div class="logo">
+        <img src="images/logo.png" alt="Book Store" />
 
-      <li><a href="contact.html">Liên hệ</a></li>
-    </ul>
-  </nav>
+        <h1>Book Store</h1>
+      </div>
 
-  <div class="search">
-    <input type="text" placeholder="Tìm kiếm sách..." />
+      <!-- Menu -->
 
-    <button>🔍</button>
-  </div>
-</header>
-<!-- =========================
-     BANNER SLIDER
-========================= -->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Trang chủ</a>
+          </li>
 
-<section class="slider">
+          <li>
+            <a href="books.html">Danh mục</a>
+          </li>
 
-    <div class="slides">
+          <li>
+            <a href="cart.html">Giỏ hàng</a>
+          </li>
 
-        <img src="images/banner1.jpg" class="slide active" alt="Banner 1">
+          <li>
+            <a href="contact.html">Liên hệ</a>
+          </li>
+        </ul>
+      </nav>
 
-        <img src="images/banner2.jpg" class="slide" alt="Banner 2">
+      <!-- Ô tìm kiếm -->
 
-        <img src="images/banner3.jpg" class="slide" alt="Banner 3">
+      <div class="search">
+        <input type="text" placeholder="Tìm kiếm sách..." />
 
-    </div>
+        <button>🔍</button>
+      </div>
+    </header>
 
-    <button class="prev" onclick="prevSlide()">
-        ❮
-    </button>
-
-    <button class="next" onclick="nextSlide()">
-        ❯
-    </button>
-
-</section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
