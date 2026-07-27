@@ -59,8 +59,9 @@ function displayProducts(list) {
                 ${book.price.toLocaleString()} đ
             </p>
 
-            <button class="detail-btn">
-                Xem chi tiết
+            <button class="detail-btn" 
+            onclick="viewDetail(${book.id})">
+            Xem chi tiết
             </button>
 
             <button class="cart-btn">
@@ -112,3 +113,12 @@ function filterCategory(category) {
   const result = books.filter((book) => book.category === category);
   displayProducts(result);
 }
+/*==================================
+        XEM CHI TIẾT
+==================================*/
+
+function viewDetail(id) {
+  localStorage.setItem("bookID", id);
+  window.location.href = "detail.html";
+}
+
