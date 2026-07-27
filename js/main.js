@@ -148,11 +148,10 @@ if (detailBox) {
                     ${book.description}
                 </p>
 
-                <button
-                    class="detail-btn">
-                    Thêm vào giỏ hàng
-                </button>
-                
+                <button class="detail-btn"
+                onclick="addToCart(${book.id})">
+                Thêm vào giỏ hàng
+                </button>      
             </div>
         </div>
         `;
