@@ -334,4 +334,22 @@ if (checkoutTotal) {
   });
   checkoutTotal.innerHTML = total.toLocaleString() + " đ";
 }
+/*=========================================
+        XÁC NHẬN ĐẶT HÀNG
+=========================================*/
+
+const checkoutForm = document.getElementById("checkoutForm");
+if (checkoutForm) {
+  checkoutForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+      alert("Giỏ hàng đang trống!");
+      return;
+    }
+    alert("🎉 Đặt hàng thành công!\nCảm ơn bạn đã mua sách.");
+    localStorage.removeItem("cart");
+    window.location.href = "index.html";
+  });
+}
 
