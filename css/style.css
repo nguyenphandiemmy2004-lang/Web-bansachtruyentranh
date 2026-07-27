@@ -212,7 +212,8 @@ nav a:hover {
   transition: 0.3s;
 }
 .product:hover {
-  transform: translateY(-10px);
+ transform:translateY(-8px);
+ box-shadow:0 8px 20px rgba(0,0,0,.2);
 }
 .product img {
   width: 100%;
@@ -426,4 +427,32 @@ footer {
   cursor: pointer;
   display: none;
   font-size: 20px;
+}
+button{
+  transition:.3s;
+}
+button:hover{
+  transform:scale(1.05);
+}
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+  .detail-box {
+    flex-direction: column;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
