@@ -409,3 +409,21 @@ footer {
 .footer-box p {
   margin: 8px 0;
 }
+/*==========================
+        TOP BUTTON
+===========================*/
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+}
