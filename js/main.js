@@ -121,4 +121,40 @@ function viewDetail(id) {
   localStorage.setItem("bookID", id);
   window.location.href = "detail.html";
 }
+/*==================================
+    HIỂN THỊ CHI TIẾT
+==================================*/
+
+const detailBox = document.getElementById("book-detail");
+if (detailBox) {
+  const id = Number(localStorage.getItem("bookID"));
+  const book = books.find((item) => item.id === id);
+  if (book) {
+    detailBox.innerHTML = `
+    
+        <div class="detail-box">
+            <img src="${book.image}">
+            <div class="detail-info">
+                <h2>${book.name}</h2>
+                <p><strong>Tác giả:</strong> ${book.author}</p>
+                <p><strong>Thể loại:</strong> ${book.category}</p>
+
+                <p class="detail-price">
+                    ${book.price.toLocaleString()} đ
+                </p>
+
+                <p>
+                    ${book.description}
+                </p>
+
+                <button
+                    class="detail-btn">
+                    Thêm vào giỏ hàng
+                </button>
+                
+            </div>
+        </div>
+        `;
+  }
+}
 
