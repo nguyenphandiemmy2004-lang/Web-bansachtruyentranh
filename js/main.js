@@ -321,4 +321,17 @@ if (topBtn) {
     });
   };
 }
+/*=========================================
+        CHECKOUT
+=========================================*/
+
+const checkoutTotal = document.getElementById("checkoutTotal");
+if (checkoutTotal) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+  cart.forEach((item) => {
+    total += item.price * item.quantity;
+  });
+  checkoutTotal.innerHTML = total.toLocaleString() + " đ";
+}
 
