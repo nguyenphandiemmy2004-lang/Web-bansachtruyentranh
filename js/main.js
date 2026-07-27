@@ -275,4 +275,17 @@ function removeItem(id) {
   localStorage.setItem("cart", JSON.stringify(cart));
   loadCart();
 }
+/*======================================
+        TRANG ĐẶT HÀNG
+======================================*/
+
+const orderTotal = document.getElementById("orderTotal");
+if (orderTotal) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+  cart.forEach((item) => {
+    total += item.price * item.quantity;
+  });
+  orderTotal.innerHTML = total.toLocaleString() + " đ";
+}
 
