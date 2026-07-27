@@ -187,23 +187,37 @@ function loadCart() {
   const cartTable = document.getElementById("cartTable");
   const totalSpan = document.getElementById("total");
   if (!cartTable || !totalSpan) return;
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cartTable.innerHTML = "";
   let total = 0;
   cart.forEach((item, index) => {
-    total += item.price * item.quantity;
+    const thanhTien = item.price * item.quantity;
+    total += thanhTien;
     cartTable.innerHTML += `
         <tr>
             <td>${index + 1}</td>
-
             <td>
-                ${item.name}
-                <br>
-                SL: ${item.quantity}
+                <img src="${item.image}"
+                     width="70">
             </td>
 
-            <td
-                ${(item.price * item.quantity).toLocaleString()} đ
+            <td>${item.name}</td>
+            <td>${item.price.toLocaleString()} đ</td>
+
+            <td>
+                <button onclick="decrease(${item.id})">-</button>
+                ${item.quantity}
+                <button onclick="increase(${item.id})">+</button>
+            </td>
+
+            <td>
+                ${thanhTien.toLocaleString()} đ
+            </td>
+
+            <td>
+                <button onclick="removeItem(${item.id})">
+                    Xóa
+                </button>
             </td>
         </tr>
         `;
@@ -221,5 +235,44 @@ function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
   }
+}
+/*======================================
+        TĂNG SỐ LƯỢNG
+======================================*/
+
+function increase(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const item = cart.find((book) => book.id === id);
+  if (item) {
+    item.quantity++;
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+}
+/*======================================
+        GIẢM SỐ LƯỢNG
+======================================*/
+
+function decrease(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const item = cart.find((book) => book.id === id);
+  if (item) {
+    item.quantity--;
+    if (item.quantity <= 0) {
+      cart = cart.filter((book) => book.id !== id);
+    }
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
+}
+/*======================================
+        XÓA 1 SẢN PHẨM
+======================================*/
+
+function removeItem(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = cart.filter((book) => book.id !== id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  loadCart();
 }
 
