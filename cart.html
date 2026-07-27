@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <div class="logo">📚 Book Store</div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+
+          <li><a href="category.html">Danh mục</a></li>
+
+          <li><a href="cart.html">Giỏ hàng</a></li>
+
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- TIÊU ĐỀ -->
+
+    <section class="cart">
+      <h2>Giỏ hàng của bạn</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+
+            <th>Tên sách</th>
+
+            <th>Giá</th>
+          </tr>
+        </thead>
+
+        <tbody id="cartTable"></tbody>
+      </table>
+
+      <div class="cart-total">
+        <h3>
+          Tổng tiền:
+
+          <span id="total"> 0 đ </span>
+        </h3>
+      </div>
+
+      <div class="cart-button">
+        <button onclick="clearCart()">Xóa giỏ hàng</button>
+
+        <a href="order.html">
+          <button>Tiến hành đặt hàng</button>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>© 2026 Book Store | Thiết kế bởi My Diễm</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
