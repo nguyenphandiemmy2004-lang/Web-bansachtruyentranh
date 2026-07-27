@@ -301,4 +301,24 @@ if (orderForm) {
     window.location.href = "index.html";
   });
 }
+/*======================================
+        NÚT LÊN ĐẦU TRANG
+======================================*/
+
+const topBtn = document.getElementById("topBtn");
+if (topBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+  topBtn.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+}
 
