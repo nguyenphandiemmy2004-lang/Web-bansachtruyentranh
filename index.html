@@ -43,10 +43,12 @@
 
       <!-- Ô tìm kiếm -->
       <div class="search">
-        <input type="text" placeholder="Tìm kiếm sách..." />
-        
-        <button>🔍</button>
+        <input type="text" 
+          id="searchInput" 
+          placeholder="Tìm kiếm sách..." />
+        <button onclick="searchBook()">🔍</button>
       </div>
+      
     </header>
     
 <!-- ===========================
@@ -80,27 +82,32 @@
       <p>Tiểu thuyết</p>
     </div>
 
-    <div class="category-item">
+    <div class="category-item"
+      onclick="filterCategory('Tất cả')">
       📚
       <p>Kỹ năng</p>
     </div>
 
-    <div class="category-item">
+    <div class="category-item"
+      onclick="filterCategory('Tất cả')">
       🎌
       <p>Manga</p>
     </div>
 
-    <div class="category-item">
+    <div class="category-item"
+      onclick="filterCategory('Tất cả')">
       👦
       <p>Thiếu nhi</p>
     </div>
 
-    <div class="category-item">
+    <div class="category-item"
+      onclick="filterCategory('Tất cả')">
       💼
       <p>Kinh tế</p>
     </div>
 
-    <div class="category-item">
+    <div class="category-item"
+      onclick="filterCategory('Tất cả')">
       ❤️
       <p>Ngôn tình</p>
     </div>
