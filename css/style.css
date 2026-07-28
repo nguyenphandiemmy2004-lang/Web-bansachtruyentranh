@@ -509,3 +509,39 @@ button:hover{
 .checkout button:hover {
   background: #0d47a1;
 }
+/*==================================
+            ABOUT
+==================================*/
+
+.about {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  line-height: 1.8;
+}
+.about h2 {
+  text-align: center;
+  color: #1565c0;
+  margin-bottom: 25px;
+}
+.about h3 {
+  margin-top: 25px;
+  color: #1565c0;
+}
+.about-image {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.about ul {
+  margin: 20px 0 20px 30px;
+}
+.about li {
+  margin-bottom: 10px;
+}
