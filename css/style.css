@@ -389,10 +389,9 @@ table button:hover {
 ===========================*/
 
 footer {
-  margin-top: 60px;
   background: #1565c0;
   color: white;
-  padding: 40px 0;
+  margin-top: 40px;
 }
 .footer-container {
   width: 90%;
@@ -400,6 +399,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 40px 0 20px;
 }
 .footer-box {
   width: 30%;
@@ -409,6 +409,17 @@ footer {
 }
 .footer-box p {
   margin: 8px 0;
+}
+/* Đường kẻ ngăn cách */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding: 15px 0;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 15px;
 }
 /*==========================
         TOP BUTTON
@@ -544,16 +555,4 @@ button:hover{
 }
 .about li {
   margin-bottom: 10px;
-}
-/*==========================
-FOOTER © 2026 Book Store
-===========================*/
-
-footer {
-  background: #1565c0;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 15px;
 }
