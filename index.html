@@ -13,130 +13,99 @@
 
     <header>
       <!-- Logo -->
-
       <div class="logo">
         <img src="images/logo.png" alt="Book Store" />
-
         <h1>Book Store</h1>
       </div>
 
       <!-- Menu -->
       <nav>
         <ul>
-          <li>
-            <a href="index.html">Trang chủ</a>
-          </li>
-
-          <li>
-            <a href="books.html">Danh mục</a>
-          </li>
-
-          <li>
-            <a href="cart.html">Giỏ hàng</a>
-          </li>
-
-          <li>
-            <a href="contact.html">Liên hệ</a>
-          </li>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="books.html">Danh mục</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="cart.html">Giỏ hàng</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
         </ul>
       </nav>
 
-      <!-- Ô tìm kiếm -->
+      <!-- Tìm kiếm -->
       <div class="search">
-        <input type="text" 
-          id="searchInput" 
-          placeholder="Tìm kiếm sách..." />
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sách..." />
         <button onclick="searchBook()">🔍</button>
       </div>
-      
     </header>
-    
-<!-- ===========================
-        BANNER
-=========================== -->
 
-<section class="slider">
-  <div class="slides">
-    <img src="images/banner1.jpg" class="slide active" alt="Banner 1" />
-    <img src="images/banner2.jpg" class="slide" alt="Banner 2" />
-    <img src="images/banner3.jpg" class="slide" alt="Banner 3" />
-  </div>
+    <!-- ================= BANNER ================= -->
 
-  <!-- Nút trái -->
-  <button class="prev" onclick="prevSlide()">❮</button>
+    <section class="slider">
+      <div class="slides">
+        <img src="images/banner1.jpg" class="slide active" alt="Banner 1" />
+        <img src="images/banner2.jpg" class="slide" alt="Banner 2" />
+        <img src="images/banner3.jpg" class="slide" alt="Banner 3" />
+      </div>
 
-  <!-- Nút phải -->
-  <button class="next" onclick="nextSlide()">❯</button>
-</section>
+      <button class="prev" onclick="prevSlide()">❮</button>
+      <button class="next" onclick="nextSlide()">❯</button>
+    </section>
 
-<!-- ==========================
-        DANH MỤC
-=========================== -->
+    <!-- ================= DANH MỤC ================= -->
 
-<section class="category">
-  <h2>Danh mục sách</h2>
+    <section class="category">
+      <h2>Danh mục sách</h2>
 
-  <div class="category-list">
-    <div class="category-item">
-      📖
-      <p>Tiểu thuyết</p>
-    </div>
+      <div class="category-list">
+        <div class="category-item" onclick="filterCategory('Tất cả')">
+          📚
+          <p>Tất cả</p>
+        </div>
 
-    <div class="category-item"
-      onclick="filterCategory('Tất cả')">
-      📚
-      <p>Kỹ năng</p>
-    </div>
+        <div class="category-item" onclick="filterCategory('Tiểu thuyết')">
+          📖
+          <p>Tiểu thuyết</p>
+        </div>
 
-    <div class="category-item"
-      onclick="filterCategory('Tất cả')">
-      🎌
-      <p>Manga</p>
-    </div>
+        <div class="category-item" onclick="filterCategory('Manga')">
+          🎌
+          <p>Manga</p>
+        </div>
 
-    <div class="category-item"
-      onclick="filterCategory('Tất cả')">
-      👦
-      <p>Thiếu nhi</p>
-    </div>
+        <div class="category-item" onclick="filterCategory('Thiếu nhi')">
+          👦
+          <p>Thiếu nhi</p>
+        </div>
 
-    <div class="category-item"
-      onclick="filterCategory('Tất cả')">
-      💼
-      <p>Kinh tế</p>
-    </div>
+        <div class="category-item" onclick="filterCategory('Ngôn tình')">
+          ❤️
 
-    <div class="category-item"
-      onclick="filterCategory('Tất cả')">
-      ❤️
-      <p>Ngôn tình</p>
-    </div>
-  </div>
-</section>
+          <p>Ngôn tình</p>
+        </div>
+      </div>
+    </section>
 
-<!-- ==========================
-      SẢN PHẨM NỔI BẬT
-=========================== -->
+    <!-- ================= SẢN PHẨM ================= -->
 
-<section class="products">
-  <h2>Sản phẩm nổi bật</h2>
-  
-  <div class="product-list" id="product-list"></div>
-</section>
- <!-- FOOTER -->
-    
+    <section class="products">
+      <h2>Sản phẩm nổi bật</h2>
+
+      <div class="product-list" id="product-list"></div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
       <div class="footer-container">
         <div class="footer-box">
           <h3>Book Store</h3>
-          <p>Website bán sách và truyện tranh.</p>
+
+          <p>Bán sách và truyện tranh trực tuyến.</p>
         </div>
 
         <div class="footer-box">
           <h3>Liên hệ</h3>
           <p>Email: bookstore@gmail.com</p>
           <p>Hotline: 0123456789</p>
-          <p>Địa chỉ: TP. Hồ Chí Minh</p>
+          <p>TP. Hồ Chí Minh</p>
         </div>
 
         <div class="footer-box">
@@ -146,17 +115,19 @@
           <p>TikTok</p>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2026 Book Store</p>
       </div>
     </footer>
 
-    <button id="topBtn">
-      ↑
-    </button>
-      
+    <!-- ================= NÚT LÊN ĐẦU ================= -->
+
+    <button id="topBtn">↑</button>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
-    
   </body>
 </html>
