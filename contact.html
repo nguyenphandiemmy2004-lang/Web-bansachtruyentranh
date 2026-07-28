@@ -17,7 +17,8 @@
       <nav>
         <ul>
           <li><a href="index.html">Trang chủ</a></li>
-          <li><a href="category.html">Danh mục</a></li>
+          <li><a href="books.html">Danh mục</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
           <li><a href="cart.html">Giỏ hàng</a></li>
           <li><a href="contact.html">Liên hệ</a></li>
         </ul>
@@ -59,12 +60,12 @@
       <div class="contact-form">
         <h2>Gửi tin nhắn</h2>
 
-        <form>
-          <input type="text" placeholder="Họ và tên" />
-          <input type="email" placeholder="Email" />
-          <input type="text" placeholder="Tiêu đề" />
-          <textarea rows="6" placeholder="Nhập nội dung..."></textarea>
-          <button>Gửi</button>
+        <form id="contactForm">
+          <input type="text" placeholder="Họ và tên" required/>
+          <input type="email" placeholder="Email" required/>
+          <input type="text" placeholder="Tiêu đề" required/>
+          <textarea rows="6" placeholder="Nhập nội dung..." required></textarea>
+          <button type="submit">Gửi</button>
         </form>
       </div>
     </section>
@@ -79,6 +80,6 @@
       ↑
     </button>
     
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
