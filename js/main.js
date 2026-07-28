@@ -352,4 +352,16 @@ if (checkoutForm) {
     window.location.href = "index.html";
   });
 }
+/*=========================================
+        CONTACT FORM
+=========================================*/
+
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Cảm ơn bạn đã gửi liên hệ! Chúng tôi sẽ phản hồi sớm nhất.");
+    contactForm.reset();
+  });
+}
 
