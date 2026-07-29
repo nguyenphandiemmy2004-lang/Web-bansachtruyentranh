@@ -34,26 +34,40 @@
       <p>Khám phá những đầu sách và truyện tranh nổi bật.</p>
     </section>
 
-    <!-- Tìm kiếm -->
-    <section class="search">
-      <input type="text" id="searchInput" placeholder="Nhập tên sách..." />
+    <!-- Công cụ tìm kiếm + lọc -->
+    <section class="book-tools">
+      <div class="book-search">
+        <input type="text" id="searchInput" placeholder="🔍 Nhập tên sách..." />
 
-      <button onclick="searchBook()">Tìm kiếm</button>
-    </section>
+        <button onclick="searchBook()">Tìm kiếm</button>
+      </div>
+      
+      <div class="filter-buttons">
+        <button onclick="filterCategory('Tất cả')">
+          Tất cả
+        </button>
 
-    <!-- Lọc -->
-    <section class="category">
-      <button onclick="filterCategory('Tất cả')">Tất cả</button>
+        <button onclick="filterCategory('Tiểu thuyết')">
+          Tiểu thuyết
+        </button>
 
-      <button onclick="filterCategory('Tiểu thuyết')">Tiểu thuyết</button>
+        <button onclick="filterCategory('Kỹ năng')">
+          Kỹ năng
+        </button>
 
-      <button onclick="filterCategory('Kỹ năng')">Kỹ năng</button>
+        <button onclick="filterCategory('Manga')">
+          Manga
+        </button>
 
-      <button onclick="filterCategory('Truyện tranh')">Truyện tranh</button>
+
+        <button onclick="filterCategory('Thiếu nhi')">
+          Thiếu nhi
+        </button>
+      </div>
     </section>
 
     <!-- Danh sách sách -->
-    <section>
+    <section class="products">
       <div class="product-list" id="product-list"></div>
     </section>
 
