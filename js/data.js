@@ -5,14 +5,15 @@
 const books = [
 
 {
-    id:1,
-    name:"Đắc Nhân Tâm",
-    author:"Dale Carnegie",
-    category:"Kỹ năng",
-    year:1936,
-    description:"Cuốn sách nổi tiếng giúp phát triển kỹ năng giao tiếp, ứng xử và tạo ảnh hưởng tích cực trong cuộc sống.",
-    price:120000,
-    image:"images/book1.jpg"
+    id: 1,
+    name: "Đắc Nhân Tâm",
+    author: "Dale Carnegie",
+    category: "Kỹ năng",
+    year: 1936,
+    publisher: "NXB Văn Học",
+    description: "Cuốn sách nổi tiếng giúp phát triển kỹ năng giao tiếp, ứng xử và tạo ảnh hưởng tích cực trong cuộc sống.",
+    price: 120000,
+    image: "images/book1.jpg"
 },
 
 {
