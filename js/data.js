@@ -4,21 +4,25 @@
 
 const books = [
   {
-    id: 1,
-    name: "Đắc Nhân Tâm",
-    author: "Dale Carnegie",
-    category: "Kỹ năng",
-    price: 120000,
-    image: "images/book1.jpg",
+  id: 1,
+  name: "Đắc Nhân Tâm",
+  author: "Dale Carnegie",
+  category: "Kỹ năng",
+  year: 1936,
+  price: 120000,
+  image: "images/book1.jpg",
+  description: "Cuốn sách nổi tiếng giúp phát triển kỹ năng giao tiếp, ứng xử và nghệ thuật đối nhân xử thế."
   },
 
   {
-    id: 2,
-    name: "Nhà Giả Kim",
-    author: "Paulo Coelho",
-    category: "Tiểu thuyết",
-    price: 135000,
-    image: "images/book2.jpg",
+  id:2,
+  name:"Nhà Giả Kim",
+  author:"Paulo Coelho",
+  category:"Tiểu thuyết",
+  year:1988,
+  price:135000,
+  image:"images/book2.jpg",
+  description:"Cuốn tiểu thuyết truyền cảm hứng về hành trình theo đuổi ước mơ."
   },
 
   {
