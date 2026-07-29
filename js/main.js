@@ -7,35 +7,37 @@ let currentSlide = 0;
 
 // Hiển thị banner
 function showSlide(index) {
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-  slides[index].classList.add("active");
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
 }
 
 // Banner tiếp theo
 function nextSlide() {
-  if (slides.length === 0) return;
-  currentSlide++;
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-  showSlide(currentSlide);
+    if (slides.length === 0) return;
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    showSlide(currentSlide);
 }
 
 // Banner trước
 function prevSlide() {
-  if (slides.length === 0) return;
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
-  showSlide(currentSlide);
+    if (slides.length === 0) return;
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    }
+    showSlide(currentSlide);
 }
 
 // Tự động chạy Slider
 if (slides.length > 0) {
-  setInterval(nextSlide, 3000);
+    setInterval(nextSlide, 3000);
 }
 /*=========================================
         HIỂN THỊ SẢN PHẨM
@@ -43,14 +45,14 @@ if (slides.length > 0) {
 
 const productList = document.getElementById("product-list");
 function displayProducts(list) {
-  if (!productList) return;
-  let html = "";
-  list.forEach((book) => {
-    html += `
+    if (!productList) return;
+    let html = "";
+    list.forEach(book => {
+        html += `
         <div class="product">
             <img src="${book.image}" alt="${book.name}">
-            <h3>${book.name}</h3>
 
+            <h3>${book.name}</h3>
             <p><strong>Tác giả:</strong> ${book.author}</p>
             <p><strong>Thể loại:</strong> ${book.category}</p>
 
@@ -58,65 +60,69 @@ function displayProducts(list) {
                 ${book.price.toLocaleString()} đ
             </p>
 
-            <button class="detail-btn" 
-            onclick="viewDetail(${book.id})">
-            Xem chi tiết
+            <button class="detail-btn"
+                onclick="viewDetail(${book.id})">
+                Xem chi tiết
             </button>
 
             <button class="cart-btn"
-            onclick="addToCart(${book.id})">
-            Thêm vào giỏ
+                onclick="addToCart(${book.id})">
+                Thêm vào giỏ hàng
             </button>
+
         </div>
         `;
-  });
-  productList.innerHTML = html;
+    });
+    productList.innerHTML = html;
 }
 
-// Hiển thị tất cả sản phẩm khi mở trang
-if (typeof books !== "undefined") {
-  displayProducts(books);
+// Khi mở trang chủ
+if (typeof books !== "undefined" && productList) {
+    displayProducts(books);
 }
 /*=========================================
             TÌM KIẾM
 =========================================*/
 
 function searchBook() {
-  const input = document.getElementById("searchInput");
-  if (!input) return;
-  const keyword = input.value.toLowerCase().trim();
-  const result = books.filter((book) =>
-    book.name.toLowerCase().includes(keyword),
-  );
-  displayProducts(result);
+    const input = document.getElementById("searchInput");
+    if (!input) return;
+    const keyword = input.value.trim().toLowerCase();
+    const result = books.filter(book =>
+        book.name.toLowerCase().includes(keyword)
+    );
+    displayProducts(result);
 }
 /*=========================================
-        TÌM KIẾM KHI ĐANG GÕ
+      TÌM KIẾM KHI ĐANG GÕ
 =========================================*/
 
 const searchInput = document.getElementById("searchInput");
 if (searchInput) {
-  searchInput.addEventListener("keyup", searchBook);
+    searchInput.addEventListener("keyup", searchBook);
 }
 /*=========================================
-        LỌC THEO THỂ LOẠI
+      LỌC THEO THỂ LOẠI
 =========================================*/
 
 function filterCategory(category) {
-  if (category === "Tất cả") {
-    displayProducts(books);
-    return;
-  }
-  const result = books.filter((book) => book.category === category);
-  displayProducts(result);
+    if (category === "Tất cả") {
+        displayProducts(books);
+        return;
+    }
+    const result = books.filter(book =>
+        book.category === category
+    );
+    displayProducts(result);
 }
-/*==================================
+/*=========================================
         XEM CHI TIẾT
-==================================*/
+=========================================*/
 
 function viewDetail(id) {
-  localStorage.setItem("bookID", id);
-  window.location.href = "detail.html";
+    localStorage.setItem("bookID", id);
+    window.location.href = "detail.html";
+
 }
 /*==================================
     HIỂN THỊ CHI TIẾT
@@ -127,7 +133,7 @@ if (detailBox) {
   const id = Number(localStorage.getItem("bookID"));
   const book = books.find((item) => item.id === id);
   if (book) {
-    bookDetail.innerHTML = `
+    detailBox.innerHTML = `
 <div class="detail-box">
   <img src="${book.image}" alt="${book.name}" />
 
@@ -137,6 +143,7 @@ if (detailBox) {
     <p><strong>Tác giả:</strong> ${book.author}</p>
     <p><strong>Thể loại:</strong> ${book.category}</p>
     <p><strong>Năm xuất bản:</strong> ${book.year}</p>
+    <p><strong>Nhà xuất bản:</strong> ${book.publisher}</p>
     <p class="detail-price">${book.price.toLocaleString()} đ</p>
     <p>${book.description}</p>
 
@@ -146,17 +153,17 @@ if (detailBox) {
   </div>
 </div>
 `;
-
   }
 }
-/*====================================
+/*======================================
         THÊM GIỎ HÀNG
-====================================*/
+======================================*/
 
 function addToCart(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const book = books.find((item) => item.id === id);
-  const index = cart.findIndex((item) => item.id === id);
+  const book = books.find(item => item.id === id);
+  if (!book) return;
+  const index = cart.findIndex(item => item.id === id);
   if (index !== -1) {
     cart[index].quantity++;
   } else {
@@ -165,7 +172,7 @@ function addToCart(id) {
       name: book.name,
       price: book.price,
       image: book.image,
-      quantity: 1,
+      quantity: 1
     });
   }
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -186,40 +193,39 @@ function loadCart() {
     const thanhTien = item.price * item.quantity;
     total += thanhTien;
     cartTable.innerHTML += `
-        <tr>
-            <td>${index + 1}</td>
-            <td>
-                <img src="${item.image}"
-                     width="70">
-            </td>
+      <tr>
+          <td>${index + 1}</td>
 
-            <td>${item.name}</td>
-            <td>${item.price.toLocaleString()} đ</td>
+          <td>
+              <img src="${item.image}" width="70">
+          </td>
 
-            <td>
-                <button onclick="decrease(${item.id})">-</button>
-                ${item.quantity}
-                <button onclick="increase(${item.id})">+</button>
-            </td>
+          <td>${item.name}</td>
 
-            <td>
-                ${thanhTien.toLocaleString()} đ
-            </td>
+          <td>${item.price.toLocaleString()} đ</td>
 
-            <td>
-                <button onclick="removeItem(${item.id})">
-                    Xóa
-                </button>
-            </td>
-        </tr>
-        `;
+          <td>
+              <button onclick="decrease(${item.id})">-</button>
+              ${item.quantity}
+              <button onclick="increase(${item.id})">+</button>
+          </td>
+
+          <td>${thanhTien.toLocaleString()} đ</td>
+
+          <td>
+              <button onclick="removeItem(${item.id})">
+                  Xóa
+              </button>
+          </td>
+      </tr>
+    `;
   });
   totalSpan.innerHTML = total.toLocaleString() + " đ";
 }
 loadCart();
 
 /*======================================
-        XÓA GIỎ HÀNG
+        XÓA TOÀN BỘ GIỎ HÀNG
 ======================================*/
 
 function clearCart() {
@@ -234,7 +240,7 @@ function clearCart() {
 
 function increase(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const item = cart.find((book) => book.id === id);
+  const item = cart.find(book => book.id === id);
   if (item) {
     item.quantity++;
   }
@@ -247,11 +253,11 @@ function increase(id) {
 
 function decrease(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const item = cart.find((book) => book.id === id);
+  const item = cart.find(book => book.id === id);
   if (item) {
     item.quantity--;
     if (item.quantity <= 0) {
-      cart = cart.filter((book) => book.id !== id);
+      cart = cart.filter(book => book.id !== id);
     }
   }
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -263,19 +269,19 @@ function decrease(id) {
 
 function removeItem(id) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart = cart.filter((book) => book.id !== id);
+  cart = cart.filter(book => book.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
   loadCart();
 }
 /*======================================
-        TRANG ĐẶT HÀNG
+        TỔNG TIỀN TRANG ORDER
 ======================================*/
 
 const orderTotal = document.getElementById("orderTotal");
 if (orderTotal) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = 0;
-  cart.forEach((item) => {
+  cart.forEach(item => {
     total += item.price * item.quantity;
   });
   orderTotal.innerHTML = total.toLocaleString() + " đ";
@@ -294,12 +300,12 @@ if (orderForm) {
   });
 }
 /*======================================
-        NÚT LÊN ĐẦU TRANG
+        NÚT LÊN ĐẦU
 ======================================*/
 
 const topBtn = document.getElementById("topBtn");
 if (topBtn) {
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", function () {
     if (window.scrollY > 200) {
       topBtn.style.display = "block";
     } else {
@@ -309,26 +315,26 @@ if (topBtn) {
   topBtn.onclick = function () {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
 }
-/*=========================================
+/*======================================
         CHECKOUT
-=========================================*/
+======================================*/
 
 const checkoutTotal = document.getElementById("checkoutTotal");
 if (checkoutTotal) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   let total = 0;
-  cart.forEach((item) => {
+  cart.forEach(item => {
     total += item.price * item.quantity;
   });
   checkoutTotal.innerHTML = total.toLocaleString() + " đ";
 }
-/*=========================================
+/*======================================
         XÁC NHẬN ĐẶT HÀNG
-=========================================*/
+======================================*/
 
 const checkoutForm = document.getElementById("checkoutForm");
 if (checkoutForm) {
@@ -344,9 +350,9 @@ if (checkoutForm) {
     window.location.href = "index.html";
   });
 }
-/*=========================================
-        CONTACT FORM
-=========================================*/
+/*======================================
+        FORM LIÊN HỆ
+======================================*/
 
 const contactForm = document.getElementById("contactForm");
 if (contactForm) {
