@@ -69,7 +69,7 @@ const books = [
     name: "Hàng Xóm Của Tôi Totoro",
     author: "Từ bộ phim của Hayao Miyazaki",
     category: "Manga",
-    year: 2026,
+    year: 2023,
     publisher: "Kim Đồng",
     description: "Hàng Xóm Của Tôi Totoro là câu chuyện trong trẻo, ấm áp về chuyến hành trình khám phá thế giới kỳ diệu và tình bạn kỳ lạ giữa hai chị em nhỏ với vị thần rừng tốt bụng Totoro ở vùng quê thanh bình.",
     price: 120000,
@@ -203,7 +203,7 @@ const books = [
     category: "Tiểu thuyết",
     year: 2024,
     publisher: "NXB Phụ Nữ Việt Nam",
-    description: "Ngô Ngô Đồng Đồng là câu chuyện tình cảm nhẹ nhàng, lãng mạn xoay quanh những rung động chân thành, sự thấu hiểu và hành trình cùng nhau trưởng thành của hai nhân vật.",
+    description: "Ngõ Ngô Đồng là câu chuyện tình cảm nhẹ nhàng, lãng mạn xoay quanh những rung động chân thành, sự thấu hiểu và hành trình cùng nhau trưởng thành của hai nhân vật.",
     price: 259000,
     image: "images/book17.jpg"
 },
