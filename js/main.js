@@ -131,30 +131,26 @@ if (detailBox) {
   const id = Number(localStorage.getItem("bookID"));
   const book = books.find((item) => item.id === id);
   if (book) {
-    detailBox.innerHTML = `
-    
-        <div class="detail-box">
-            <img src="${book.image}">
-            <div class="detail-info">
-                <h2>${book.name}</h2>
-                <p><strong>Tác giả:</strong> ${book.author}</p>
-                <p><strong>Thể loại:</strong> ${book.category}</p>
+    bookDetail.innerHTML = `
+<div class="detail-box">
+  <img src="${book.image}" alt="${book.name}" />
 
-                <p class="detail-price">
-                    ${book.price.toLocaleString()} đ
-                </p>
+  <div class="detail-info">
+    <h2>${book.name}</h2>
 
-                <p>
-                    ${book.description}
-                </p>
+    <p><strong>Tác giả:</strong> ${book.author}</p>
+    <p><strong>Thể loại:</strong> ${book.category}</p>
+    <p><strong>Năm xuất bản:</strong> ${book.year}</p>
+    <p class="detail-price">${book.price.toLocaleString()} đ</p>
+    <p>${book.description}</p>
 
-                <button class="detail-btn"
-                onclick="addToCart(${book.id})">
-                Thêm vào giỏ hàng
-                </button>      
-            </div>
-        </div>
-        `;
+    <button class="cart-btn detail-cart" onclick="addToCart(${book.id})">
+      🛒 Thêm vào giỏ hàng
+    </button>
+  </div>
+</div>
+`;
+
   }
 }
 /*====================================
