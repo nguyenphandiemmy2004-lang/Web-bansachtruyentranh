@@ -49,7 +49,7 @@ const books = [
     publisher: "NXB Thanh Niên",
     description:"Sách hướng dẫn học HTML, CSS và JavaScript từ cơ bản đến nâng cao dành cho sinh viên và người mới bắt đầu.",
     price:199000,
-    image:"images/book4.jpg"
+    image:"images/book4.webp"
 },
 
 {
@@ -73,7 +73,7 @@ const books = [
     publisher: "Kim Đồng",
     description: "Hàng Xóm Của Tôi Totoro là câu chuyện trong trẻo, ấm áp về chuyến hành trình khám phá thế giới kỳ diệu và tình bạn kỳ lạ giữa hai chị em nhỏ với vị thần rừng tốt bụng Totoro ở vùng quê thanh bình.",
     price: 120000,
-    image: "images/book6.jpg"
+    image: "images/book6.webp"
 },
 
 {
@@ -85,7 +85,7 @@ const books = [
     publisher: "Hà Nội",
     description: "Có Thương Cậu Không? là câu chuyện tình cảm tuổi trẻ đầy nhẹ nhàng, sâu lắng nhưng cũng đượm buồn về những cảm xúc chớm nở và hành trình trưởng thành của các nhân vật.",
     price: 239000,
-    image: "images/book7.jpg"
+    image: "images/book7.webp"
 },
 
 {
@@ -109,7 +109,7 @@ const books = [
     publisher: "Dân Trí",
     description: "Nhà Có Bé Ngoan là câu chuyện ngôn tình ngọt ngào, ấm áp nhưng cũng không kém phần sâu sắc về tình yêu, sự chữa lành và những cảm xúc đời thường đong đầy tình cảm.",
     price: 225000,
-    image: "images/book9.jpg"
+    image: "images/book9.webp"
 },
 
 {
@@ -121,7 +121,7 @@ const books = [
     publisher: "Kim Đồng",
     description: "Hachiko - Chú Chó Đợi Chờ là câu chuyện cảm động dựa trên sự kiện có thật về lòng trung thành vô điều kiện của chú chó Hachiko, kiên nhẫn đợi chờ người chủ đã mất suốt gần 10 năm tại ga tàu.",
     price: 60000,
-    image: "images/book10.jpg"
+    image: "images/book10.webp"
 },
 
 {
@@ -133,7 +133,7 @@ const books = [
     publisher: "Dân Trí",
     description: "Chạm Vào Màn Đêm Trong Em là bộ manga tâm lý, lãng mạn đầy tinh tế kể về mối quan hệ sâu sắc, sự đồng cảm và hành trình chữa lành những tổn thương tâm hồn giữa hai nhân vật.",
     price: 85000,
-    image: "images/book11.jpg"
+    image: "images/book11.webp"
 },
 
 {
@@ -169,7 +169,7 @@ const books = [
     publisher: "Thế Giới",
     description: "Vitamin Mèo Và Những Câu Chuyện Bất Tận là cuốn truyện tranh xoay quanh những khoảnh khắc hài hước, đáng yêu và đầy ắp yêu thương trong cuộc sống hàng ngày cùng các chú mèo.",
     price: 129000,
-    image: "images/book14.jpg"
+    image: "images/book14.webp"
 },
 
 {
@@ -205,7 +205,7 @@ const books = [
     publisher: "NXB Phụ Nữ Việt Nam",
     description: "Ngõ Ngô Đồng là câu chuyện tình cảm nhẹ nhàng, lãng mạn xoay quanh những rung động chân thành, sự thấu hiểu và hành trình cùng nhau trưởng thành của hai nhân vật.",
     price: 259000,
-    image: "images/book17.jpg"
+    image: "images/book17.webp"
 },
 
 {
@@ -241,7 +241,7 @@ const books = [
     publisher: "Hà Nội",
     description: "Bất Tuân - Tập 3 là phần kết khép lại hành trình thanh xuân đầy ý nghĩa, nơi hai nhân vật chính kiên định đuổi theo ước mơ, cùng trưởng thành và gặt hái trái ngọt tình yêu.",
     price: 185000,
-    image: "images/book20.jpg"
+    image: "images/book20.webp"
 },
 
 ];
