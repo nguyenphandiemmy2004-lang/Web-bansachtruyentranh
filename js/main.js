@@ -37,7 +37,6 @@ function prevSlide() {
 if (slides.length > 0) {
   setInterval(nextSlide, 3000);
 }
-
 /*=========================================
         HIỂN THỊ SẢN PHẨM
 =========================================*/
@@ -78,7 +77,6 @@ function displayProducts(list) {
 if (typeof books !== "undefined") {
   displayProducts(books);
 }
-
 /*=========================================
             TÌM KIẾM
 =========================================*/
@@ -92,7 +90,6 @@ function searchBook() {
   );
   displayProducts(result);
 }
-
 /*=========================================
         TÌM KIẾM KHI ĐANG GÕ
 =========================================*/
@@ -101,7 +98,6 @@ const searchInput = document.getElementById("searchInput");
 if (searchInput) {
   searchInput.addEventListener("keyup", searchBook);
 }
-
 /*=========================================
         LỌC THEO THỂ LOẠI
 =========================================*/
@@ -360,4 +356,3 @@ if (contactForm) {
     contactForm.reset();
   });
 }
-
