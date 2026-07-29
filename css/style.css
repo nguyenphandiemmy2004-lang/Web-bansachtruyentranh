@@ -522,3 +522,130 @@ nav ul{
 .contact-form button:hover{
     background:#0d47a1;
 }
+/*==========================
+        HOME PAGE
+==========================*/
+
+/* Search */
+.search{
+    display:flex;
+    align-items:center;
+}
+.search input{
+    width:220px;
+    height:38px;
+    border:none;
+    outline:none;
+    padding:0 15px;
+    border-radius:20px 0 0 20px;
+    font-size:15px;
+}
+.search button{
+    width:45px;
+    height:38px;
+    border:none;
+    cursor:pointer;
+    background:#ff9800;
+    color:#fff;
+    border-radius:0 20px 20px 0;
+}
+.search button:hover{
+    background:#ef6c00;
+}
+
+/* Banner */
+.slider{
+    width:90%;
+    max-width:1300px;
+    height:420px;
+    margin:35px auto;
+    overflow:hidden;
+    border-radius:18px;
+    position:relative;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+.slides{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.slide{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+}
+.slide.active{
+    display:block;
+}
+.prev,
+.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+.prev{
+    left:20px;
+}
+.next{
+    right:20px;
+}
+.prev:hover,
+.next:hover{
+    background:#1565c0;
+}
+
+/* Category */
+.category{
+    width:90%;
+    margin:60px auto;
+    text-align:center;
+}
+.category h2{
+    color:#1565c0;
+    font-size:38px;
+    margin-bottom:35px;
+}
+.category-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+.category-item{
+    width:170px;
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+.category-item:hover{
+    transform:translateY(-8px);
+}
+.category-item{
+    font-size:40px;
+}
+.category-item p{
+    margin-top:15px;
+    font-size:18px;
+    color:#1565c0;
+    font-weight:bold;
+}
+
+/* Product title */
+.products h2{
+    text-align:center;
+    color:#1565c0;
+    font-size:38px;
+    margin-bottom:40px;
+}
