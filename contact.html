@@ -1,87 +1,143 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liên hệ</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Book Store</title>
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-  <body>
+<body>
+
     <!-- HEADER -->
-
     <header>
-      <div class="logo">📚 Book Store</div>
 
-      <nav>
-        <ul>
-          <li><a href="index.html">Trang chủ</a></li>
-          <li><a href="books.html">Danh mục</a></li>
-          <li><a href="about.html">Giới thiệu</a></li>
-          <li><a href="cart.html">Giỏ hàng</a></li>
-          <li><a href="contact.html">Liên hệ</a></li>
-        </ul>
-      </nav>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo">
+            <h1>Book Store</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="books.html">Danh mục</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="cart.html">Giỏ hàng</a></li>
+                <li><a href="contact.html" class="active">Liên hệ</a></li>
+            </ul>
+        </nav>
+
     </header>
 
-    <!-- LIÊN HỆ -->
-
-    <section class="contact">
-      <div class="contact-info">
-        <h2>Thông tin cửa hàng</h2>
-
+    <!-- TIÊU ĐỀ -->
+    <section class="page-title">
+        <h2>Liên hệ với Book Store</h2>
+      
         <p>
-          <strong>Tên cửa hàng:</strong>
-          Book Store
+            Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, hãy liên hệ với chúng tôi.
         </p>
+    </section>
 
-        <p>
-          <strong>Địa chỉ:</strong>
-          123 Nguyễn Văn Linh, TP.HCM
-        </p>
+    <!-- NỘI DUNG -->
 
-        <p>
-          <strong>Điện thoại:</strong>
-          0123 456 789
-        </p>
+    <section class="contact-page">
+        <div class="contact-container">
 
-        <p>
-          <strong>Email:</strong>
-          bookstore@gmail.com
-        </p>
+            <!-- THÔNG TIN -->
+            <div class="contact-info">
+                <h3>Thông tin cửa hàng</h3>
 
-        <p>
-          <strong>Giờ mở cửa:</strong>
-          08:00 - 21:00
-        </p>
-      </div>
+                <p><strong>🏪 Tên cửa hàng:</strong> Book Store</p>
+                <p><strong>📍 Địa chỉ:</strong> 123 Nguyễn Văn Linh, TP. Hồ Chí Minh</p>
+                <p><strong>📞 Hotline:</strong> 0123 456 789</p>
+                <p><strong>📧 Email:</strong> bookstore@gmail.com</p>
+                <p><strong>🕒 Giờ mở cửa:</strong> 08:00 - 20:00</p>
 
-      <div class="contact-form">
-        <h2>Gửi tin nhắn</h2>
+                <hr>
 
-        <form id="contactForm">
-          <input type="text" placeholder="Họ và tên" required/>
-          <input type="email" placeholder="Email" required/>
-          <input type="text" placeholder="Tiêu đề" required/>
-          <textarea rows="6" placeholder="Nhập nội dung..." required></textarea>
-          <button type="submit">Gửi</button>
-        </form>
-      </div>
+                <h3>Vì sao chọn Book Store?</h3>
+                <p>✔️ Hàng trăm đầu sách chất lượng.</p>
+                <p>✔️ Giá tốt mỗi ngày.</p>
+                <p>✔️ Giao hàng nhanh trên toàn quốc.</p>
+                <p>✔️ Hỗ trợ khách hàng 24/7.</p>
+
+            </div>
+
+            <!-- FORM -->
+
+            <div class="contact-form">
+                <h3>Gửi tin nhắn</h3>
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        placeholder="Họ và tên"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        placeholder="Tiêu đề"
+                        required
+                    >
+
+                    <textarea
+                        placeholder="Nhập nội dung..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">
+                        Gửi liên hệ
+                    </button>
+                  
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
 
     <footer>
-      <div class="footer-bottom">
-        <p>© 2026 Book Store</p>
-      </div>
+        <div class="footer-container">
+          
+            <div class="footer-box">
+                <h3>Book Store</h3>
+                <p>Website bán sách và truyện tranh.</p>
+                <p>Đồng hành cùng bạn trên hành trình tri thức.</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Liên hệ</h3>
+                <p>Email: bookstore@gmail.com</p>
+                <p>Hotline: 0123 456 789</p>
+                <p>Địa chỉ: TP. Hồ Chí Minh</p>
+            </div>
+
+            <div class="footer-box">
+                <h3>Theo dõi</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>TikTok</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Book Store</p>
+        </div>
     </footer>
 
-    <button id="topBtn">
-      ↑
-    </button>
-    
+    <!-- NÚT LÊN ĐẦU -->
+    <button id="topBtn">↑</button>
+
     <script src="js/main.js"></script>
-  </body>
+
+</body>
 </html>
